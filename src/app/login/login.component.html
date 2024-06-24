@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="content" [formGroup]="loginFormGroup">
+        <h1>Login</h1>
+        <mat-form-field class="example-form-field">
+            <mat-label>Mail</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" [disabled]="loginFormGroup.invalid" (click)="loginForm()">Login</button>
+        <a [routerLink]="'/register'">Create an account.</a>
+
+    </div>
+</div>

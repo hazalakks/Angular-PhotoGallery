@@ -1,0 +1,25 @@
+<div class="container">
+    
+    <div class="content" [formGroup]="registerFormGroup">
+        <h1>Register</h1>
+        <mat-form-field class="example-form-field">
+            <mat-label>Ad-Soyad</mat-label>
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field">
+            <mat-label>Mail</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" (click)="registerForm()">Register</button>
+        <a [routerLink]="'/login'">Do you have an account?</a>
+
+
+    </div>
+</div>

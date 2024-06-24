@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header-container">
+        <div class="header">
+            <div class="logo">
+                <span>PhotoGallery</span>
+            </div>
+            <div class="login-register">
+                <button mat-raised-button color="accent" [routerLink]="'/register'">Register</button>
+                <button mat-raised-button color="accent" [routerLink]="'/login'">Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <h1>
+            <span>Find great quality photos</span>
+        </h1>
+    </div>
+</div>
+
+<app-header (selectedCategory)="filterCategory($event)"></app-header>
+
+<div class="photos">
+    @for (photo of filteredData; track $index) {
+    <app-photo-card [photo]="photo"></app-photo-card>
+    }
+</div>
